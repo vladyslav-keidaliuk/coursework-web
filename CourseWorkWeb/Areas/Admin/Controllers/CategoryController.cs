@@ -2,8 +2,9 @@
 using CourseWorkWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CourseWorkWeb.Controllers
+namespace CourseWorkWeb.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         // private readonly ICategoryRepository _categoryRepository;
@@ -115,7 +116,7 @@ namespace CourseWorkWeb.Controllers
             _unitOfWork.Save();
             TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
-    
+
         }
     }
 }
