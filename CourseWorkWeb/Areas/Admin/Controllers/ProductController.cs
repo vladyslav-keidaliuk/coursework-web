@@ -1,12 +1,14 @@
 ﻿using CourseWorkWeb.Data;
 using CourseWorkWeb.Models;
 using CourseWorkWeb.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CourseWorkWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class ProductController : Controller
     {
         // private readonly IProductRepository _productRepository;
