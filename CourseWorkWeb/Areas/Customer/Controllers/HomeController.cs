@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace CourseWorkWeb.Areas.Customer.Controllers
 {
     [Area("Customer")]
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -31,6 +32,7 @@ namespace CourseWorkWeb.Areas.Customer.Controllers
             return View(product);
         }
 
+        [Authorize(Roles = SD.Role_Customer)]
         public IActionResult Privacy()
         {
             return View();

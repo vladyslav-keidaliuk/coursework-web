@@ -40,6 +40,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// Check the commits
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
